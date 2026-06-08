@@ -12,18 +12,11 @@ export default function Contact() {
 
     const rect = button.getBoundingClientRect();
 
-    const x =
-      e.clientX -
-      rect.left -
-      rect.width / 2;
+    const x = e.clientX - rect.left - rect.width / 2;
 
-    const y =
-      e.clientY -
-      rect.top -
-      rect.height / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
 
-    button.style.transform =
-      `translate(${x * 0.15}px, ${y * 0.15}px)`;
+    button.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
   };
 
   const reset = () => {
@@ -31,21 +24,14 @@ export default function Contact() {
 
     if (!button) return;
 
-    button.style.transform =
-      "translate(0px,0px)";
+    button.style.transform = "translate(0px,0px)";
   };
 
   return (
-    <section
-      className={`contact ${
-        cinemaMode ? "cinema-mode" : ""
-      }`}
-    >
+    <section className={`contact ${cinemaMode ? "cinema-mode" : ""}`}>
       <div className="contact-noise" />
 
-      <span className="contact-label">
-        FINAL FRAME
-      </span>
+      <span className="contact-label">FINAL FRAME</span>
 
       <h2>
         LET'S
@@ -58,13 +44,11 @@ export default function Contact() {
       </h2>
 
       <p>
-        Available for design,
-        campaigns, visual storytelling
-        and creative collaborations.
+        Available for design, campaigns, visual storytelling and creative
+        collaborations.
       </p>
 
-      <div className="contact-actions">
-
+      {/* <div className="contact-actions">
         <a
           href="mailto:varandabbeta@gmail.com"
           ref={buttonRef}
@@ -74,10 +58,9 @@ export default function Contact() {
         >
           START A PROJECT
         </a>
+      </div> */}
 
-      </div>
-
-      <div className="contact-links">
+      {/* <div className="contact-links">
 
         <a href="#">
           LinkedIn
@@ -87,8 +70,38 @@ export default function Contact() {
           Resume
         </a>
 
+      </div> */}
+
+      <div className="contact-divider" />
+
+      <div className="contact-divider" />
+
+      <div className="contact-email-block">
+        <a href="mailto:varandabbeta@gmail.com" className="contact-big-email">
+          varandabbeta@gmail.com
+        </a>
       </div>
 
+      <div className="contact-meta">
+        <span>Open for Internships</span>
+
+        <span>Available Worldwide</span>
+
+        <span>Based in India</span>
+      </div>
+
+      <div className="contact-socials">
+        <a href="#">LinkedIn ↗</a>
+
+        <a href="#">Resume ↗</a>
+      </div>
+
+      <div className="contact-signature">
+        <span>VARAN DABBETA</span>
+        <p>Visual Storyteller & Creative Designer</p>
+      </div>
+
+      {/* 
       <button
         className="cinema-toggle"
         onClick={() =>
@@ -98,7 +111,7 @@ export default function Contact() {
         {cinemaMode
           ? "EXIT CINEMA MODE"
           : "ENTER CINEMA MODE"}
-      </button>
+      </button> */}
     </section>
   );
 }

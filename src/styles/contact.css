@@ -58,7 +58,7 @@
     clamp(
       4rem,
       10vw,
-      10rem
+      8rem
     );
 
   line-height: .85;
@@ -211,4 +211,117 @@
   100% {
     opacity: .4;
   }
+}
+
+
+
+
+
+.contact-email-block {
+  margin-top: 60px;
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  text-align: center;
+}
+
+.contact-label-small {
+  display: block;
+
+  color: var(--accent);
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 20px;
+}
+
+.contact-big-email {
+  color: var(--text);
+  margin-top: 40px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: clamp(2.5rem, 5vw, 6rem);
+  font-weight: 700;
+
+  letter-spacing: -0.05em;
+
+  transition: .3s ease;
+}
+
+.contact-big-email:hover {
+  color: var(--accent);
+}
+
+.contact-meta {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 40px;
+
+  margin-top: 40px;
+
+  color: rgba(255,255,255,.5);
+
+  flex-wrap: wrap;
+}
+
+.contact-socials {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  margin-top: 30px;
+}
+
+.contact-socials a {
+  text-decoration: none;
+
+  color: var(--text);
+
+  opacity: .6;
+
+  transition: .3s ease;
+}
+
+.contact-socials a:hover {
+  color: var(--accent);
+
+  opacity: 1;
+}
+
+.mega-mail{
+  font-size:clamp(2rem,4vw,5rem);
+  font-weight:700;
+  letter-spacing:-.04em;
+}
+
+.contact-signature {
+  margin-top: 80px;
+
+  text-align: center;
+
+  opacity: .45;
+}
+
+.contact-signature span {
+  display: block;
+
+  letter-spacing: 4px;
+
+  font-size: 12px;
+
+  margin-bottom: 12px;
+}
+
+.contact-signature p {
+  margin: 0;
+
+  font-size: 14px;
 }

@@ -12,33 +12,34 @@ const projects = [
     title: "ARTICLE 370",
     category: "Movie Poster",
     image: article370,
-    color: "#d18b35",
+    color: "#e8e13a",
   },
   {
     id: "02",
     title: "DEVARA",
     category: "Campaign Design",
     image: devara,
-    color: "#c44a2f",
+    color: "#e8e13a",
   },
   {
     id: "03",
     title: "NCERT PHYSICS",
     category: "Educational Campaign",
     image: ncert,
-    color: "#4e8dff",
+    color: "#e8e13a",
   },
   {
     id: "04",
     title: "XPLOREPRO",
     category: "Marketing Campaign",
     image: tech,
-    color: "#FFF500",
+    color: "#e8e13a",
   },
 ];
 
 export default function FeaturedWork() {
   const [active, setActive] = useState(projects[0]);
+  const isMobile = window.innerWidth <= 768;
 
   return (
     <section
@@ -60,46 +61,36 @@ export default function FeaturedWork() {
       </div>
 
       <div className="archive-layout">
-
         <div className="archive-list">
-
           {projects.map((project) => (
             <div
               key={project.id}
               className={`archive-item ${
-                active.id === project.id
-                  ? "active"
-                  : ""
+                active.id === project.id ? "active" : ""
               }`}
-              onMouseEnter={() =>
-                setActive(project)
-              }
+              onMouseEnter={() => setActive(project)}
             >
-              <span className="archive-number">
-                {project.id}
-              </span>
+              <span className="archive-number">{project.id}</span>
 
-              <div>
+              <div className="archive-card-content">
                 <h3>{project.title}</h3>
 
-                <p>
-                  {project.category}
-                </p>
+                <p>{project.category}</p>
+
+                {isMobile && (
+                  <div className="archive-thumb">
+                    <img src={project.image} alt={project.title} />
+                  </div>
+                )}
               </div>
             </div>
           ))}
         </div>
 
         <div className="archive-preview">
-
           <div className="preview-glow" />
 
-          <img
-            key={active.title}
-            src={active.image}
-            alt={active.title}
-          />
-
+          <img key={active.title} src={active.image} alt={active.title} />
         </div>
       </div>
     </section>

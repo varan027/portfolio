@@ -32,9 +32,7 @@ export default function Hero() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prev) =>
-        prev === works.length - 1 ? 0 : prev + 1
-      );
+      setActiveIndex((prev) => (prev === works.length - 1 ? 0 : prev + 1));
     }, 3500);
 
     return () => clearInterval(interval);
@@ -76,57 +74,35 @@ export default function Hero() {
         if (particle.y > canvas.height) particle.y = 0;
 
         ctx.beginPath();
-        ctx.arc(
-          particle.x,
-          particle.y,
-          particle.size,
-          0,
-          Math.PI * 2
-        );
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
 
-        ctx.fillStyle =
-          "rgba(255,255,255,0.08)";
+        ctx.fillStyle = "rgba(255,255,255,0.08)";
 
         ctx.fill();
       });
 
-      animationId =
-        requestAnimationFrame(animate);
+      animationId = requestAnimationFrame(animate);
     };
 
     animate();
 
-    window.addEventListener(
-      "resize",
-      resize
-    );
+    window.addEventListener("resize", resize);
 
     return () => {
       cancelAnimationFrame(animationId);
-      window.removeEventListener(
-        "resize",
-        resize
-      );
+      window.removeEventListener("resize", resize);
     };
   }, []);
 
   return (
     <section className="hero">
-
-      <canvas
-        ref={canvasRef}
-        className="hero-canvas"
-      />
+      <canvas ref={canvasRef} className="hero-canvas" />
 
       <div className="hero-vignette" />
 
       <div className="hero-content">
-
         <div className="hero-left">
-
-          <span className="hero-name">
-            VARAN DABBETA
-          </span>
+          <span className="hero-name">VARAN DABBETA</span>
 
           <h1>
             VISUALS
@@ -144,40 +120,23 @@ export default function Hero() {
             Creative Designer
           </p>
 
+          <div className="hero-mobile-hint">4 Selected Works ↓</div>
         </div>
 
         <div className="hero-right">
-
           <div className="hero-preview">
-
-            <img
-              key={activeIndex}
-              src={works[activeIndex].image}
-              alt=""
-            />
+            <img key={activeIndex} src={works[activeIndex].image} alt="" />
 
             <div className="hero-work-info">
+              <span>Featured Work</span>
 
-              <span>
-                Featured Work
-              </span>
-
-              <h3>
-                {works[activeIndex].title}
-              </h3>
-
+              <h3>{works[activeIndex].title}</h3>
             </div>
-
           </div>
-
         </div>
-
       </div>
 
-      <div className="hero-scroll">
-        SCROLL TO EXPLORE
-      </div>
-
+      <div className="hero-scroll">SCROLL TO EXPLORE</div>
     </section>
   );
 }
