@@ -1,0 +1,214 @@
+.contact {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  padding:
+    120px 7vw;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #050505,
+      #020202
+    );
+}
+
+.contact-noise {
+  position: absolute;
+  inset: 0;
+
+  opacity: .03;
+
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(
+      rgba(255,255,255,.5) 1px,
+      transparent 1px
+    );
+
+  background-size: 8px 8px;
+}
+
+.contact-label {
+  color: var(--accent);
+
+  letter-spacing: 5px;
+
+  font-size: 12px;
+
+  margin-bottom: 30px;
+}
+
+.contact h2 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      4rem,
+      10vw,
+      10rem
+    );
+
+  line-height: .85;
+
+  letter-spacing: -.06em;
+
+  max-width: 1200px;
+}
+
+.contact p {
+  max-width: 550px;
+
+  margin-top: 40px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .55
+    );
+
+  line-height: 1.8;
+}
+
+.contact-actions {
+  margin-top: 70px;
+}
+
+.contact-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 280px;
+  height: 72px;
+
+  text-decoration: none;
+
+  color: #050505;
+
+  font-weight: 700;
+
+  background:
+    var(--accent);
+
+  border-radius: 999px;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.contact-button:hover {
+  box-shadow:
+    0 0 40px
+    rgba(
+      201,
+      155,
+      60,
+      .45
+    );
+}
+
+.contact-links {
+  display: flex;
+
+  gap: 30px;
+
+  margin-top: 40px;
+}
+
+.contact-links a {
+  text-decoration: none;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .5
+    );
+
+  transition:
+    color .3s ease;
+}
+
+.contact-links a:hover {
+  color: var(--accent);
+}
+
+.cinema-toggle {
+  margin-top: 60px;
+
+  background: transparent;
+
+  border: none;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      .4
+    );
+
+  cursor: pointer;
+
+  letter-spacing: 2px;
+
+  font-size: 11px;
+}
+
+.cinema-mode::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle,
+      transparent 35%,
+      rgba(
+        201,
+        155,
+        60,
+        .08
+      ) 100%
+    );
+
+  animation:
+    projector 4s ease-in-out infinite;
+}
+
+@keyframes projector {
+
+  0% {
+    opacity: .4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: .4;
+  }
+}
