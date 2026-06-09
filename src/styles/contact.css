@@ -451,3 +451,20 @@
   }
 
 }
+
+
+
+.fade-out{
+  margin-top:90px;
+
+  color:var(--accent);
+
+  opacity:.7;
+
+  letter-spacing: 6px;
+
+  font-size:11px;
+
+  text-transform:uppercase;
+
+  animation:fadein 3s ease-in-out infinite;}

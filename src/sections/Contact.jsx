@@ -31,8 +31,7 @@ export default function Contact() {
     <section className={`contact ${cinemaMode ? "cinema-mode" : ""}`}>
       <div className="contact-noise" />
 
-      <span className="contact-label">FINAL FRAME</span>
-
+      <div className="contact-divider"></div>
       <h2>
         LET'S
         <br />
@@ -72,10 +71,6 @@ export default function Contact() {
 
       </div> */}
 
-      <div className="contact-divider" />
-
-      <div className="contact-divider" />
-
       <div className="contact-email-block">
         <a href="mailto:varandabbeta@gmail.com" className="contact-big-email">
           varandabbeta@gmail.com
@@ -91,15 +86,10 @@ export default function Contact() {
       </div>
 
       <div className="contact-socials">
-        <a href="#">LinkedIn ↗</a>
-
+        <a href="https://www.linkedin.com/in/varan-dabbeta">LinkedIn ↗</a>
         <a href="#">Resume ↗</a>
       </div>
-
-      <div className="contact-signature">
-        <span>VARAN DABBETA</span>
-        <p>Visual Storyteller & Creative Designer</p>
-      </div>
+      <div className="fade-out">© 2026 Varan Dabbeta</div>
 
       {/* 
       <button

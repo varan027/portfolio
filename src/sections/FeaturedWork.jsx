@@ -3,37 +3,37 @@ import "../styles/featured-work.css";
 
 import article370 from "../assets/article-370.png";
 import devara from "../assets/devara-fear-song.png";
-import ncert from "../assets/ncert-poster.png";
-import tech from "../assets/tech_event_poster.png";
+import cocaCola from "../assets/coca-cola.png";
+import olioPizza from "../assets/olio-pizza.png";
 
 const projects = [
   {
     id: "01",
     title: "ARTICLE 370",
-    category: "Movie Poster",
+    category: "Movie Poster Design",
     image: article370,
-    color: "#e8e13a",
+    color: "#d8d1b4",
   },
   {
     id: "02",
-    title: "DEVARA",
-    category: "Campaign Design",
-    image: devara,
-    color: "#e8e13a",
+    title: "COCA-COLA",
+    category: "Brand Advertisement",
+    image: cocaCola,
+    color: "#ff3b30",
   },
   {
     id: "03",
-    title: "NCERT PHYSICS",
-    category: "Educational Campaign",
-    image: ncert,
-    color: "#e8e13a",
+    title: "DEVARA",
+    category: "Entertainment Campaign",
+    image: devara,
+    color: "#8d95c7",
   },
   {
     id: "04",
-    title: "XPLOREPRO",
-    category: "Marketing Campaign",
-    image: tech,
-    color: "#e8e13a",
+    title: "OLIO PIZZA",
+    category: "Food Campaign Design",
+    image: olioPizza,
+    color: "#d4b92a",
   },
 ];
 

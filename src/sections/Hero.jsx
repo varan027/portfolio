@@ -1,42 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import "../styles/hero.css";
-
-import article370 from "../assets/article-370.png";
-import devara from "../assets/devara-fear-song.png";
-import ncert from "../assets/ncert-poster.png";
-import xplorepro from "../assets/tech_event_poster.png";
-
-const works = [
-  {
-    title: "Article 370",
-    image: article370,
-  },
-  {
-    title: "Devara",
-    image: devara,
-  },
-  {
-    title: "NCERT Physics",
-    image: ncert,
-  },
-  {
-    title: "XplorePro",
-    image: xplorepro,
-  },
-];
-
 export default function Hero() {
   const canvasRef = useRef(null);
-
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev === works.length - 1 ? 0 : prev + 1));
-    }, 3500);
-
-    return () => clearInterval(interval);
-  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -124,14 +89,8 @@ export default function Hero() {
         </div>
 
         <div className="hero-right">
-          <div className="hero-preview">
-            <img key={activeIndex} src={works[activeIndex].image} alt="" />
-
-            <div className="hero-work-info">
-              <span>Featured Work</span>
-
-              <h3>{works[activeIndex].title}</h3>
-            </div>
+          <div className="hero-signature">
+            <h2>VARAN</h2>
           </div>
         </div>
       </div>
